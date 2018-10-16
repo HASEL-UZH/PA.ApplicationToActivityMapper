@@ -62,6 +62,9 @@ namespace ApplicationToActivityMapper
         [Description("Idle (e.g. break, lunch, meeting)")]
         Idle, // all IDLE events that can't be mapped elsewhere
 
+        [Description("Gaming")]
+        Gaming, // all IDLE events that can't be mapped elsewhere
+
         [Description("Uncategorized")]
         Unknown
     }
