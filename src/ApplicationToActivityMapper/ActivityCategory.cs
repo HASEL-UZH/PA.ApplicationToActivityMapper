@@ -6,7 +6,7 @@
 namespace ApplicationToActivityMapper
 {
     /// <summary>
-    /// Activitiy categories which are automatically mapped for the retrospection
+    /// Activity categories which are automatically mapped for the retrospection
     /// by the ActivityMapper
     /// </summary>
     public enum ActivityCategory
@@ -43,7 +43,7 @@ namespace ApplicationToActivityMapper
 
         [Description("Instant Messaging")]
         InstantMessaging, // subcategory of InformalMeeting
-                          //WebBrowsing, // uncategorized web browsing
+
         [Description("Browsing work-related")]
         WorkRelatedBrowsing,
 
@@ -63,7 +63,7 @@ namespace ApplicationToActivityMapper
         Idle, // all IDLE events that can't be mapped elsewhere
 
         [Description("Gaming")]
-        Gaming, // all IDLE events that can't be mapped elsewhere
+        Gaming,
 
         [Description("Uncategorized")]
         Unknown
