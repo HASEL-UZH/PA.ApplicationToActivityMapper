@@ -26,7 +26,7 @@ namespace ApplicationToActivityMapper
         private static readonly List<string> CodingReviewApps = new List<string> { "codeflow", "gerrit", "stash", "kallithea", "code review", "rhodecode", "rietveld", "crucible", "phabricator" };
         private static readonly List<string> CodingVersionControlApps = new List<string> { "diff", "repository", "cleardiffbl", "cleardlg", "cleardiffmrg", "clearhistory", "clearvtree", "sourcetree", "svn", "tortoiseproc", "scm", "tfs", "push", "pull", "commit", "git", "bitbucket", "visual studio online", "thgw", "thg" };
 
-        private static readonly List<string> EmailAppsAndKeywords = new List<string> { "mail", "outlook", "thunderbird", "outlook.com" }; // incudes gmail, yahoo mail, mac mail, outlook.com
+        private static readonly List<string> EmailAppsAndKeywords = new List<string> { "mail", "outlook", "thunderbird", "outlook.com" }; // includes gmail, yahoo mail, mac mail, outlook.com
         private static readonly List<string> PlanningAppsAndKeywords = new List<string> { "backlog", "winproj", "trello", "wunderlist", "todoist", "personalanalytics", "time tracking", "track time", "rescuetime", "clearquest", "scrum", "kanban", "codealike", "jira", "rally", "versionone", "calendar", "kalender", "sprint", "user story", "plan", "to-do", "todo", "task", "aufgabe", "vorgangsliste", "work item", "basecamp", "xmind" };
         private static readonly List<string> ReadingWritingAppsAndKeywords = new List<string> { "aether", "insight3", "snagiteditor", "confluence", "picasa", "quora", "windows photo viewer", "visio", "flashmedialiveencoder", "photofiltre", "jmp", "treepad", "winword", "word", "leo", "translate", "übersetzer", "wordpress", "mspub", ".doc", ".xls", ".ppt", ".pub", "excel", "powerpnt", "onenote", "evernote", "acrord", "sharepoint", "pdf", "foxitreader", "adobe reader", "reader", "glcnd", "wiki", "keep", "google docs", "yammer", "docs", "office", "paint", "gimp", "photoshop", "lightroom", "miktex", "texmaker", "latex", "texstudio", "latech studio", "photo", "foto", "picpick", "greenshot", "honeyview" }; //not "note" as notepad is more coding
         private static readonly List<string> InstantMessagingAppsAndKeywords = new List<string> { "slack", "skype", "lync", "wechat", "sip", "g2mlauncher", "ciscowebexstart", "nbrplay", "g2mui", "chatter", "atmgr", "hangout", "viber", "messaging", "whatsapp", "messenger", "ctimon", "ciscojabber", "teams", "zoom" }; // includes skype for business
@@ -37,7 +37,7 @@ namespace ApplicationToActivityMapper
 
         private static readonly List<string> FileNavigationExplorerApps = new List<string> { "explorer", "speedcommander", "q-dir", "7zfm", "dropbox", "everything" };
 
-        private static readonly List<string> OtherMusicAppsAndKeywords = new List<string> { "groove", "zune", "itunes", "vlc", "music", "musik", "spotify", "wmplayer", "video", "youtube", "vimeo", "audacity"};
+        private static readonly List<string> OtherMusicAppsAndKeywords = new List<string> { "groove", "zune", "itunes", "vlc", "music", "musik", "spotify", "wmplayer", "video", "youtube", "vimeo", "audacity" };
         private static readonly List<string> OtherRdpApps = new List<string> { "rdcman", "mstsc", "vmconnect", "virtualbox", "vmware", "vpxclient", "msiexec", "pageant", "putty", "mremote", "mremoteng" };
         private static readonly List<string> Gaming = new List<string> { "farcry4", "battle.net" };
         private static readonly List<string> OtherKeywords = new List<string> { "mmc", "dfsvc", "procmon64", "mousewithoutboarders", "vpnui", "dinotify", "perfmon", "agentransack", "lockapp", "searchui", "pwsafe", "wuauclt", "calc", "zip", "rar", "wwahost", "update", "avpui", "procexp64", "taskmgr", "pgp", "explorer", "groove", "dwm", "rstrui", "snippingtool", "onedrive", "settings", "einstellungen", "ccleaner64", "avira.systray", "avscan", "rzsynapse", "winstore.app", "gazenative8", "devicepairingwizard", "printui", "sapisvr", "msaccess", "audacity", "icofx3" };
@@ -46,6 +46,7 @@ namespace ApplicationToActivityMapper
 
         #region Context Mapping Logic
 
+        /// <inheritdoc />
         /// <summary>
         /// Map a windowsactivity-entry (given process and window name) to 
         /// an activity category.
@@ -60,7 +61,7 @@ namespace ApplicationToActivityMapper
 
         /// <summary>
         /// Mapping algorithm, which maps an activity to an activity
-        /// category, based on the heuristcs (defined in the lists above).
+        /// category, based on the heuristics (defined in the lists above).
         /// </summary>
         /// <param name="processName"></param>
         /// <param name="windowName"></param>
