@@ -78,9 +78,14 @@ namespace ApplicationToActivityMapper
                 windowName = windowName?.ToLower();
                 processName = processName?.ToLower();
 
+                // There should always be a process name. Ignore window title if process name is null.
+                if (processName == null)
+                {
+                    return ActivityCategory.Unknown;
+                }
 
                 // all IDLE, will later manually check with more info to find meetings, breaks, etc.
-                if (processName != null && processName.Equals("idle"))
+                if (processName.Equals("idle"))
                 {
                     return ActivityCategory.Idle;
                 }
